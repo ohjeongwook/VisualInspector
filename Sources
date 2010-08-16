@@ -1,0 +1,26 @@
+TARGETNAME=vs
+TARGETTYPE=DYNLINK
+TARGETPATH=.
+
+DLLENTRY=_DllMainCRTStartup
+
+GETOPT_DIR=T:\mat\Projects\ResearchTools\Console\xGetOpt
+STRING_TO_ARGUMENT_LIST_DIR=T:\mat\Projects\ResearchTools\String\StringToArgumentList
+
+!if "$(DBGSDK_INC_PATH)" != ""
+INCLUDES = $(DBGSDK_INC_PATH);$(GETOPT_DIR);$(STRING_TO_ARGUMENT_LIST_DIR);$(INCLUDES)
+!endif
+!if "$(DBGSDK_LIB_PATH)" == ""
+DBGSDK_LIB_PATH = $(SDK_LIB_PATH)
+!else
+DBGSDK_LIB_PATH = $(DBGSDK_LIB_PATH)\$(TARGET_DIRECTORY)
+!endif
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib $(DBGSDK_LIB_PATH)\dbgeng.lib
+USE_MSVCRT=1
+
+USE_STL=1
+USE_NATIVE_EH=1
+UMTYPE=windows
+MSC_WARNING_LEVEL = /W4 /WX
+SOURCES=viscope.cpp commands.cpp viscope.rc StringToArgumentList.cpp XGetopt.cpp
