@@ -1,4 +1,4 @@
-#include "viscope.h"
+#include "VisualInspector.h"
 #include <strsafe.h>
 
 PDEBUG_CLIENT4 g_ExtClient;

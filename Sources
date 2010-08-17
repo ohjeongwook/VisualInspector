@@ -1,4 +1,4 @@
-TARGETNAME=vs
+TARGETNAME=vi
 TARGETTYPE=DYNLINK
 TARGETPATH=.
 
@@ -23,4 +23,4 @@ USE_STL=1
 USE_NATIVE_EH=1
 UMTYPE=windows
 MSC_WARNING_LEVEL = /W4 /WX
-SOURCES=viscope.cpp commands.cpp viscope.rc StringToArgumentList.cpp XGetopt.cpp
+SOURCES=VisualInspector.cpp commands.cpp VisualInspector.rc StringToArgumentList.cpp XGetopt.cpp

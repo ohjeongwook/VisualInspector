@@ -14,5 +14,5 @@ REM C:\Program Files\Microsoft SDKs\Windows\v6.0A\include
 REM C:\Program Files\Microsoft Visual Studio .NET 2003\SDK\v1.1\include\
 build -cZMg
 dir i386\*.dll
-copy i386\*.dll  "C:\Program Files\Debugging Tools for Windows (x86)\winext"
+copy i386\*.dll  "C:\Program Files (x86)\Debugging Tools for Windows (x86)\winext"
 pause

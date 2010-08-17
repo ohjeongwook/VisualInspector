@@ -9,7 +9,7 @@ int DebugLevel=0;
 #include <windows.h>
 #include <stdio.h>
 
-#include "viscope.h"
+#include "VisualInspector.h"
 
 #include <list>
 #include <hash_set>
